@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Intro, Navbar, Main, World } from './components';
+import { Header, Intro, Navbar, Main, World, Input } from './components';
 
 function App() {
   return (
@@ -7,9 +7,14 @@ function App() {
       <div className='gradient__bg'>
         <Navbar />
         <Header />
-        <Intro />
-        <Main />
-        <World />
+        <div className='start'>
+          <Intro />
+          <World />
+          <Main />
+        </div>
+      </div>
+      <div>
+        <Input />
       </div>
     </div>
   );

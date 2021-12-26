@@ -1,6 +1,7 @@
 .world {
-    display: inline-block;
-    justify-content: row;
-    height: 65%;
-    width: 65%;
+    float: right;
+    height: 50%;
+    width: 50%;
+    margin-right: 5rem;
+    margin-top: 7rem;
 }
