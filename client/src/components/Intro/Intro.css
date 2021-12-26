@@ -1,0 +1,22 @@
+.intro {
+    margin-right: 2rem;
+    margin-top: 6rem;
+    padding: 2rem 9rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-white {
+    color: rgb(255, 255, 255);
+}
+
+.title-orange {
+    color: rgb(255, 192, 74);
+}
+
+h1 {
+    font-size: 70px;
+}

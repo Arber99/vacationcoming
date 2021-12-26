@@ -1,0 +1,33 @@
+.main {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    padding: 2rem 9rem;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.number {
+    color:rgb(232, 255, 28);
+}
+
+.main-text {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-family: Helvetica;
+    font-weight: 600;
+    font-size: 18px;
+    width: 8rem;
+    line-height: 25px;
+
+    background: rgb(255, 195, 32);
+    border-radius: 2px;
+    border: 0;
+    outline: none;
+}

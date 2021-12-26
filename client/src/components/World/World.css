@@ -1,0 +1,6 @@
+.world {
+    display: inline-block;
+    justify-content: row;
+    height: 65%;
+    width: 65%;
+}
