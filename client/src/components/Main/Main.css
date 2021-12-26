@@ -33,3 +33,8 @@ button {
     border: 0;
     outline: none;
 }
+
+button:hover {
+    background: rgb(204, 146, 38);
+    cursor: pointer;
+}
