@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Intro, Navbar, Main, World, Input } from './components';
+import { Header, Intro, Navbar, Main, World, Input, Result } from './components';
 
 function App() {
   return (
@@ -13,8 +13,9 @@ function App() {
           <Main />
         </div>
       </div>
-      <div>
+      <div className="second">
         <Input />
+        <Result />
       </div>
     </div>
   );

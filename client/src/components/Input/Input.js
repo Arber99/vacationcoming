@@ -3,7 +3,7 @@ import './Input.css'
 
 const Input = () => {
     return (
-        <div>
+        <div className='first'>
             <div className='input'>
                 <h1 className='title-white'>Choose your input parameters</h1>
             </div>
