@@ -1,0 +1,12 @@
+.result {
+    margin-top: 18rem;
+    font-size: 1.5rem;
+    font-family: Helvetica;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
+    float: right;
+}
+
+.result-number {
+    color:rgb(250, 113, 16)
+}
