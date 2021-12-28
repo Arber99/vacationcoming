@@ -1,13 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useContext} from 'react'
 import './Result.css'
+import { QuestionContext } from '../Question/QuestionContext'
 
-const Result = (props) => {
+const Result = () => {
 
-    const [res, setRes] = useState(0)
-
-    useEffect(() => {
-        setRes(props.num)
-    })
+    const [res] = useContext(QuestionContext)
 
     return (
         <div className='result'>
