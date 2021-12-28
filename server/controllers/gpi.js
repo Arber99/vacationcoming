@@ -12,6 +12,21 @@ export const getGPI = async (req, res) => {
     }
 }
 
+export const getGPIspecific = async (req, res) => {
+
+    const {gpiVal} = req.params
+
+    try {
+        const gpi = await GPI.find( { "y2020": {$lte: gpiVal}})
+        //const _gpi = await gpi.filter(value => value.y2020 > gpiVal)
+
+        res.status(200).json(gpi)
+    }   
+    catch (error) {
+        res.status(404).json({ message: error.message })
+    }
+}
+
 //! This allows for posting new GPIs; however, this won't be needed, as the list is already complete
 
 /*export const postGPI = (req, res) => {
@@ -28,17 +43,3 @@ export const getGPI = async (req, res) => {
     }
 }
 */
-export const getGPIspecific = async (req, res) => {
-
-    const {gpiVal} = req.params
-
-    try {
-        const gpi = await GPI.find( { "y2020": {$lte: gpiVal}})
-        //const _gpi = await gpi.filter(value => value.y2020 > gpiVal)
-
-        res.status(200).json(gpi)
-    }   
-    catch (error) {
-        res.status(404).json({ message: error.message })
-    }
-}
