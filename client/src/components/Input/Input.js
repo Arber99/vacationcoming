@@ -1,15 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Input.css'
+import { getResults } from '../../api'
+import Result from './Result/Result.js'
 
 const Input = () => {
+
+    const [res, setRes] = useState(163)
+
+    const updateResult = async() => {
+        const number = await getResults(document.getElementById('input1').value);
+        setRes(number.data.length)
+    }
+
     return (
         <div className='first'>
             <div className='input'>
                 <h1 className='title-white'>Choose your input parameters</h1>
             </div>
+            <Result num={res} />
             <div className='question'>
                 <h2 className='title-white'>1. On a scale from 0 to 100, how safe should the country be?</h2>
-                <input className='input-basic'></input>
+                <input className='input-basic' onChange={updateResult} id='input1'></input>
             </div>
             <div className='question'>
                 <h2 className='title-white'>2. On a scale from 0 to 100, how cheap should the country be?</h2>

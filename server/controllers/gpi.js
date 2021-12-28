@@ -33,7 +33,7 @@ export const getGPIspecific = async (req, res) => {
     const {gpiVal} = req.params
 
     try {
-        const gpi = await GPI.find( { "y2020": {$gte: gpiVal}})
+        const gpi = await GPI.find( { "y2020": {$lte: gpiVal}})
         //const _gpi = await gpi.filter(value => value.y2020 > gpiVal)
 
         res.status(200).json(gpi)
