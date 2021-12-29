@@ -26,7 +26,7 @@ export const Question = props => {
     }
 
     return (
-        <div>
+        <div className='question-main'>
             <div className='question'>
                 <h2 className='title-white'>1. On a scale from 0 to 100, how safe should the country be?</h2>
                 <input className='input-basic' onChange={updateResult1} id='input1'></input>

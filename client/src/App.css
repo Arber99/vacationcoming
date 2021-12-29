@@ -6,10 +6,6 @@
   font-family: Helvetica;
 }
 
-body {
-  background: var(--color-bg)
-}
-
 a {
   color: unset;
   text-decoration: none;
@@ -21,7 +17,9 @@ a {
 }
 
 .second {
-  display: inline-block;
+  display: flex;
+  background: #040C18;
+  width: 100vw;
 }
 
 .gradient__bg

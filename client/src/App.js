@@ -1,5 +1,5 @@
 import './App.css';
-import { Intro, Navbar, Main, World, Input} from './components';
+import { Intro, Navbar, Main, World, Input, Final} from './components';
 
 function App() {
 
@@ -15,6 +15,9 @@ function App() {
       </div>
       <div className="second">
         <Input />
+      </div>
+      <div>
+        <Final />
       </div>
     </div>
   );
