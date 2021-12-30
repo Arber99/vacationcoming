@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import './Question.css'
 import { getGPIs, getCOIs } from '../../../api'
 import { QuestionContext } from '../../Context/QuestionContext'
+import { ResultContext } from '../../Context/ResultContext'
 
 export const Question = props => {
 
@@ -9,14 +10,17 @@ export const Question = props => {
     const [gpi,setGpi] = val1
     const [coi,setCoi] = val2
 
+    const [result, setResult] = useContext(ResultContext)
+
     const updateResult1 = async() => {
 
         const x = ((100 - document.getElementById('input1').value)*0.03075)+1.2
 
         const number = await getGPIs(x);
         const formatter = []
-        Object.values(number.data).map(value => formatter.push(value.Country))
+        Object.values(number.data).map(value => formatter.push(value))
         setGpi(formatter)
+
     }
 
     const updateResult2 = async() => {
@@ -25,9 +29,17 @@ export const Question = props => {
 
         const number = await getCOIs(x);
         const formatter = []
-        Object.values(number.data).map(value => formatter.push(value.country))
+        Object.values(number.data).map(value => formatter.push(value))
         setCoi(formatter)
+
     }
+
+    // const updateResult = () => {
+    //     const arr = Object.values(gpi).filter(value => Object.values(coi).includes(value));
+    //     const formatter = []
+    //     Object.values(arr).map(value => formatter.push(value))
+    //     setResult(formatter)
+    // }
 
     return (
         <div className='question-main'>

@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from 'react'
 import './Outcome.css'
 import { QuestionContext } from '../../Context/QuestionContext'
+import { ResultContext } from '../../Context/ResultContext'
 
 const Result = () => {
 
@@ -8,9 +9,15 @@ const Result = () => {
     const [gpi,] = val1
     const [coi,] = val2
 
+    const [result, setResult] = useContext(ResultContext)
 
     const arr = Object.values(gpi).filter(value => Object.values(coi).includes(value));
-    //setFinal(arr);
+
+    useEffect(() => {
+        setResult(Object.values(arr))
+        },
+        [gpi, coi]
+    )
 
     return (
         <div className='outcome'>
