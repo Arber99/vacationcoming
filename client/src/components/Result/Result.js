@@ -1,7 +1,7 @@
 import React from 'react'
-import './Final.css'
+import './Result.css'
 
-const Final = () => {
+const Result = () => {
     return (
         <div className='final'>
             <br /> <br />
@@ -9,4 +9,4 @@ const Final = () => {
     )
 }
 
-export default Final
+export default Result

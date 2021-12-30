@@ -1,5 +1,4 @@
 import React, {useState, createContext} from 'react'
-import './Question.css'
 
 export const QuestionContext = createContext()
 
