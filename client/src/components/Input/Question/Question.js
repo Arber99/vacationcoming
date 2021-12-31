@@ -34,13 +34,6 @@ export const Question = props => {
 
     }
 
-    // const updateResult = () => {
-    //     const arr = Object.values(gpi).filter(value => Object.values(coi).includes(value));
-    //     const formatter = []
-    //     Object.values(arr).map(value => formatter.push(value))
-    //     setResult(formatter)
-    // }
-
     return (
         <div className='question-main'>
             <div className='question'>
@@ -54,13 +47,13 @@ export const Question = props => {
             <div className='question'>
                 <h2 className='title-white'>3. What is an absolute must for the country?</h2>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;A beach
+                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;A Beach
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Hiking trails
+                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Hiking Trails
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Northern lights
+                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
                     <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Snow
