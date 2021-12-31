@@ -4,6 +4,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import gpi from './routes/gpi.js'
 import coi from './routes/coi.js'
+import stat from './routes/stat.js'
 import mongoose from 'mongoose'
 
 const app = express()
@@ -15,6 +16,7 @@ app.use(cors())
 
 app.use('/gpi', gpi)
 app.use('/coi', coi)
+app.use('/stat', stat)
 
 app.get('/', (req, res) => {
     res.send('API exists')
