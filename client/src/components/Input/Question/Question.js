@@ -34,6 +34,14 @@ export const Question = props => {
 
     }
 
+    const updateResult3 = async() => {
+        console.log(document.getElementById('input3').checked)
+    }
+
+    const updateResult4 = async() => {
+        console.log(document.getElementById('input4').checked)
+    }
+
     return (
         <div className='question-main'>
             <div className='question'>
@@ -47,13 +55,13 @@ export const Question = props => {
             <div className='question'>
                 <h2 className='title-white'>3. What is an absolute must for the country?</h2>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;A Beach
+                    <input type='checkbox' className='input-checkbox' onChange={updateResult3} id='input3'/>&nbsp;&nbsp;A Beach
+                </label>
+                <label>
+                    <input type='checkbox' className='input-checkbox' onChange={updateResult4} id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
                     <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Hiking Trails
-                </label>
-                <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
                     <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Snow
