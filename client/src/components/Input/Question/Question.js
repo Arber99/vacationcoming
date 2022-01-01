@@ -1,14 +1,17 @@
 import React, {useContext} from 'react'
 import './Question.css'
-import { getGPIs, getCOIs } from '../../../api'
+import { getGPIs, getCOIs, getSTATs } from '../../../api'
 import { QuestionContext } from '../../Context/QuestionContext'
 import { ResultContext } from '../../Context/ResultContext'
 
 export const Question = props => {
 
-    const {val1, val2} = useContext(QuestionContext)
+    const {val1, val2, val3, val4, val5} = useContext(QuestionContext)
     const [gpi,setGpi] = val1
     const [coi,setCoi] = val2
+    const [beach, setBeach] = val3
+    const [aurora, setAurora] = val4
+    const [stats, setStats] = val5
 
     const [result, setResult] = useContext(ResultContext)
 
@@ -34,12 +37,31 @@ export const Question = props => {
 
     }
 
-    const updateResult3 = async() => {
-        console.log(document.getElementById('input3').checked)
-    }
+    const updateStats = async() => {
+        var param = []
 
-    const updateResult4 = async() => {
-        console.log(document.getElementById('input4').checked)
+        if(document.getElementById('input4').checked) {
+            param.push('?aurora=true')
+        }
+        if(document.getElementById('input3').checked) {
+            param.push('?beach=true')
+        }
+
+        if(document.getElementById('input5').checked) {
+            param.push('?snow=true')
+        }
+
+        var params = param.join('&')
+
+        if(param.length === 0) {
+            setStats([])
+        }
+        else {
+            const number = await getSTATs(params.toString())
+            const formatter = []
+            Object.values(number.data).map(value => formatter.push(value))
+            setStats(formatter)
+        }
     }
 
     return (
@@ -55,16 +77,16 @@ export const Question = props => {
             <div className='question'>
                 <h2 className='title-white'>3. What is an absolute must for the country?</h2>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateResult3} id='input3'/>&nbsp;&nbsp;A Beach
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input3'/>&nbsp;&nbsp;A Beach
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateResult4} id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
                     <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Hiking Trails
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Snow
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input5'/>&nbsp;&nbsp;Snow
                 </label>
             </div>
             <div className='question'>
