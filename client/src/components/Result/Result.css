@@ -1,0 +1,33 @@
+.result {
+    margin-right: 2rem;
+    padding: 2rem 9rem;
+    float: left;
+    width: 100vw;
+    max-width:100%;
+
+    background:-moz-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+  
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+  
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+  
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+}
+
+.title-white {
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.h2 {
+    font-size: 36px;
+}

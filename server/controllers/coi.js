@@ -17,7 +17,7 @@ export const getCOIspecific = async (req, res) => {
     const {coiVal} = req.params
 
     try {
-        const coi = await COI.find( { "cost_of_living_index": {$lte: coiVal}})
+        const coi = await COI.find( { "cost_of_living_index": {$lte: coiVal}}).distinct('country')
         //const _gpi = await gpi.filter(value => value.y2020 > gpiVal)
 
         res.status(200).json(coi)

@@ -1,13 +1,11 @@
-.input {
-    margin-right: 2rem;
-    margin-top: 3rem;
-    padding: 2rem 9rem;
-}
-
 .question {
     margin-right: 2rem;
     margin-top: 4rem;
     padding: 1.5rem 9rem;
+}
+
+.question-main {
+    float: left;
 }
 
 .input-basic {
@@ -48,24 +46,10 @@ label {
     color:rgb(255, 255, 255)
   }
 
-.first {
-    float: left;
-}
-
 .title-white {
     color: rgb(255, 255, 255);
 }
-
-h1 {
-    font-size: 60px;
-}
-
 @media screen and (max-width: 700px) {
-    .input {
-        margin-right: 0.3rem;
-        margin-top: 3rem;
-        padding: 0.5rem 3rem;
-    }
 
     .question {
         margin-right: 0.3rem;
@@ -87,9 +71,5 @@ h1 {
         font-family: Helvetica;
         font-weight: 600;
         color:rgb(255, 255, 255)
-    }
-
-    h1 {
-        font-size: 50px;
     }
 }
