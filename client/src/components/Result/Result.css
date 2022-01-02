@@ -5,23 +5,36 @@
     width: 100vw;
     max-width:100%;
 
-    background:-moz-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+    /* ff 3.6+ */
+    /* background:-moz-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
 
     /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
-  
+    /* background:-webkit-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
+
     /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
-  
+    /* background:-o-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
+
     /* ie 10+ */
-    background:-ms-radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
-  
+    /* background:-ms-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
+
     /* global 92%+ browsers support */
-    background:radial-gradient(circle at 27% 39%, rgba(240, 143, 0, 1) 0%, rgba(220, 51, 0, 1) 100%);
+    /* background:radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
+    background: rgb(255, 255, 255);
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+  }
 
 .title-white {
     color: rgb(255, 255, 255);
+}
+
+.title-black {
+    color: rgb(0, 0, 0);
 }
 
 h1 {

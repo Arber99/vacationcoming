@@ -10,10 +10,13 @@ const headers = {
     }
 
 export const getPICTUREs = async(req, res) => {
-    axios.get('https://api.pexels.com/v1/search?query=nature&per_page=1',
+
+    const { country } = req.query
+    console.log(country)
+
+    axios.get(`https://api.pexels.com/v1/search?query=${country}&per_page=1`,
         { headers: headers})
         .then(response => {
-            console.log(response.data)
         res.status(200).send(response.data);
       })
       .catch(error => {
