@@ -48,6 +48,7 @@ label {
 
 .title-white {
     color: rgb(255, 255, 255);
+    font-size: 30px;
 }
 @media screen and (max-width: 700px) {
 

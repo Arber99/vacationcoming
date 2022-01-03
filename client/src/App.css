@@ -12,35 +12,35 @@ a {
 }
 
 .start {
-  vertical-align: middle;
+  vertical-align: left;
   display: inline-block;
 }
 
 .second {
   display: flex;
-  background: #040C18;
+  background: #02030f;
   width: 100vw;
   max-width:100%;
 }
 
 .gradient__bg
 {
-
+    background: rgb(8, 0, 116)
 
     /* ff 3.6+ */
-    background:-moz-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
+    /* background:-moz-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
 
     /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
+    /* background:-webkit-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
 
     /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
+    /* background:-o-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
 
     /* ie 10+ */
-    background:-ms-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
+    /* background:-ms-radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
 
     /* global 92%+ browsers support */
-    background:radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%);
+    /* background:radial-gradient(circle at 21% 25%, rgba(148, 137, 255, 1) 0%, rgba(0, 166, 255, 1) 99%); */
 
 }
 

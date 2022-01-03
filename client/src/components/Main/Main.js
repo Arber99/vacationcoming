@@ -7,7 +7,7 @@ export const Main = () => {
             <p>We will choose one out of <span className='number'>163</span> countries <br /> for your next vacation.</p>
             <div>
                 <br /><br />
-                <button type='button'>Let's start</button>
+                <button type='button' className='button'>Let's start</button>
                 <br /><br /><br /><br /><br /><br />
             </div>
         </div>

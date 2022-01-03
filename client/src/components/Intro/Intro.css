@@ -1,18 +1,15 @@
 .intro {
     margin-right: 2rem;
-    margin-top: 4rem;
-    padding: 2rem 9rem;
+    margin-top: 8rem;
+    padding-left: 9rem;
     float: left;
 }
 
-.title-white {
+.title-white-intro {
     color: rgb(255, 255, 255);
+    font-size: 70px;
 }
 
 .title-orange {
     color: rgb(255, 192, 74);
-}
-
-h1 {
-    font-size: 70px;
 }
