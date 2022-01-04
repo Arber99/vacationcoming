@@ -12,6 +12,21 @@ export const getCOI = async (req, res) => {
     }
 }
 
+export const getCLIcountry = async (req, res) => {
+
+    const {country} = req.params
+
+    try {
+        const coi = await COI.find( {'country': country}).distinct('cost_of_living_index')
+        //const _gpi = await gpi.filter(value => value.y2020 > gpiVal)
+
+        res.status(200).json(coi)
+    }   
+    catch (error) {
+        res.status(404).json({ message: error.message })
+    }
+}
+
 export const getCOIspecific = async (req, res) => {
 
     const {coiVal} = req.params

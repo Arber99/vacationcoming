@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 6rem;
+    border-bottom: 1px solid rgba(243, 243, 243, 0.2);
 }
 .navbar-links {
     flex: 1;

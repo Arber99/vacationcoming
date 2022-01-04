@@ -2,18 +2,14 @@ import React, {useContext} from 'react'
 import './Question.css'
 import { getGPIs, getCOIs, getSTATs } from '../../../api'
 import { QuestionContext } from '../../Context/QuestionContext'
-import { ResultContext } from '../../Context/ResultContext'
 
-export const Question = props => {
+export const Question = (props) => {
 
-    const {val1, val2, val3, val4, val5} = useContext(QuestionContext)
-    const [gpi,setGpi] = val1
-    const [coi,setCoi] = val2
-    const [beach, setBeach] = val3
-    const [aurora, setAurora] = val4
-    const [stats, setStats] = val5
-
-    const [result, setResult] = useContext(ResultContext)
+    const {val1, val2, val3, val4} = useContext(QuestionContext)
+    const [,setGpi] = val1
+    const [,setCoi] = val2
+    const [, setStats] = val3
+    const [submit, setSubmit] = val4
 
     const updateResult1 = async() => {
 
@@ -64,6 +60,10 @@ export const Question = props => {
         }
     }
 
+    const submitForm = () => {
+        setSubmit(true)
+    }
+
     return (
         <div className='question-main'>
             <div className='question'>
@@ -97,6 +97,11 @@ export const Question = props => {
                 <label>
                     <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;No
                 </label>
+            </div>
+            <div className='submit'>
+                {(!submit) ? 
+                (<button type='button' className='button' onClick={submitForm}>Submit parameters</button>):
+                (<button type='button' className='button-submitted'>Submitted</button>)}
             </div>
         </div>
     )

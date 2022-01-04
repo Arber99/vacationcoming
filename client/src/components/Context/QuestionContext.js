@@ -6,16 +6,14 @@ export const QuestionProvider = (props) => {
 
     const [gpi, setGpi] = useState([])
     const [coi, setCoi] = useState([])
-    const [beach, setBeach] = useState(false)
-    const [aurora, setAurora] = useState(false)
     const [stats, setStats] = useState([])
+    const [submit, setSubmit] = useState(false)
 
     return (<QuestionContext.Provider value={ {
         val1: [gpi, setGpi], 
         val2: [coi, setCoi],
-        val3: [beach, setBeach],
-        val4: [aurora, setAurora],
-        val5: [stats, setStats]}}>
+        val3: [stats, setStats],
+        val4: [submit, setSubmit]}}>
             {props.children}
             </QuestionContext.Provider>)
 }

@@ -5,24 +5,23 @@ import { ResultContext } from '../../Context/ResultContext'
 
 const Result = () => {
 
-    const {val1, val2, val3, val4, val5} = useContext(QuestionContext)
-    const [gpi,] = val1
-    const [coi,] = val2
-    const [beach,] = val3
-    const [aurora,] = val4
-    const [stats, setStats] = val5
+    const {val1, val2, val3, val4} = useContext(QuestionContext)
+    const [gpi] = val1
+    const [coi] = val2
+    const [stats] = val3
+    const [submit] = val4
 
     const [result, setResult] = useContext(ResultContext)
 
-    const arr = Object.values(gpi).filter(value => Object.values(coi).includes(value));
-
     useEffect(() => {
 
-        if(stats.length !== 0) {
+        const arr = Object.values(gpi).filter(value => Object.values(coi).includes(value));
+
+        if(stats.length !== 0 && !submit) {
             const ars = Object.values(arr).filter(value => stats.includes(value))
             setResult(ars)
         }
-        else {
+        else if (!submit) {
             setResult(Object.values(arr))
         }
         },

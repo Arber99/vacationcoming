@@ -20,7 +20,7 @@
 .button {
     font-family: inherit;
     font-weight: bold;
-    width: 12rem;
+    width: 14rem;
     height: 4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -37,4 +37,24 @@
     color: white;
     transform: scale(1.02);
     cursor: pointer;
+}
+
+.button-submitted {
+    font-family: inherit;
+    font-weight: bold;
+    width: 14rem;
+    height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 2px solid rgb(1, 233, 40);
+    background: transparent;
+    color: rgb(1, 233, 40);
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    }
+    
+.button-submitted:hover {
+    transform: scale(1.02);
+    cursor: default;
 }

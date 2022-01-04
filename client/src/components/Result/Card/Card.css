@@ -62,9 +62,11 @@ transition: background 200ms ease-in, color 200ms ease-in;
 
 .card:hover {
 transform: scale(1.02);
+cursor: default;
 }
 
 .card_button:hover {
 background: #4b00d5;
 color: white;
+cursor: pointer;
 }

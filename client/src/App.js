@@ -4,7 +4,6 @@ import { ResultProvider } from './components/Context/ResultContext';
 import { QuestionProvider } from './components/Context/QuestionContext'
 
 function App() {
-
   return (
     <div className='App'>
       <QuestionProvider>

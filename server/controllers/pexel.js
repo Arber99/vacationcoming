@@ -14,7 +14,13 @@ export const getPICTUREs = async(req, res) => {
     const { country } = req.query
     console.log(country)
 
-    axios.get(`https://api.pexels.com/v1/search?query=${country}&per_page=1`,
+    function randomInt(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+      
+      const randomNumber = randomInt(1, 4)
+
+    axios.get(`https://api.pexels.com/v1/search?query=${country}&per_page=1&page=${randomNumber}`,
         { headers: headers})
         .then(response => {
         res.status(200).send(response.data);

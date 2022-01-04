@@ -12,6 +12,20 @@ export const getGPI = async (req, res) => {
     }
 }
 
+export const getGPIcountry = async (req, res) => {
+
+    const {country} = req.params
+
+    try {
+        const gpi = await GPI.find( { 'Country': country}).distinct('y2020')
+
+        res.status(200).json(gpi)
+    }   
+    catch (error) {
+        res.status(404).json({ message: error.message })
+    }
+}
+
 export const getGPIspecific = async (req, res) => {
 
     const {gpiVal} = req.params
