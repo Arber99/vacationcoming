@@ -4,7 +4,7 @@ import { ResultProvider } from './components/Context/ResultContext';
 import { QuestionProvider } from './components/Context/QuestionContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Country from './pages/Country';
+import Info from './pages/Info';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
             </div>
             <Routes>
               <Route exact path='/' element={<Home />} />
-              <Route exact path='/country/:country' element={<Country />} />
+              <Route exact path='/info/:country' element={<Info />} />
             </Routes>
           </Router>
         </ResultProvider>
