@@ -18,7 +18,7 @@ export const getPICTUREs = async(req, res) => {
         return Math.floor(Math.random() * (max - min + 1) + min)
       }
       
-      const randomNumber = randomInt(1, 4)
+      const randomNumber = randomInt(1, 3)
 
     axios.get(`https://api.pexels.com/v1/search?query=${country}&per_page=1&page=${randomNumber}`,
         { headers: headers})

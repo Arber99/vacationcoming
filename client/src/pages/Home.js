@@ -1,0 +1,22 @@
+import React from 'react'
+import { Intro, World, Main, Input, Result } from '../components'
+
+const Home = () => {
+    return (
+        <div>
+            <div className='gradient__bg start'>
+                <Intro />
+                <World />
+                <Main />
+            </div>
+            <div className="second">
+              <Input />
+            </div>
+            <div>
+              <Result />
+            </div>
+        </div>
+    )
+}
+
+export default Home
