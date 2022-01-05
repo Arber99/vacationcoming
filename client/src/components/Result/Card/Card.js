@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './Card.css'
 import { getPICTUREs, getGPIcountry, getCLIcountry } from '../../../api/index'
+import { Link } from 'react-router-dom'
 
 const Card = (props) => {
 
@@ -48,7 +49,7 @@ const Card = (props) => {
                 <p className='card_description'>GPI: {gpi}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{gpiscore} out of 100</p>
                 <p className='card_description'>CLI: {cli}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{cliscore} out of 100</p>
                 <div className='card_button_wrapper'>
-                    <button className='card_button'>More Info</button>
+                    <Link to={`/info/${props.country}`}><button className='card_button'>More Info</button></Link>
                 </div>
             </div>
         </div>

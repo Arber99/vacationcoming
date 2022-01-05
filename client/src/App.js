@@ -1,27 +1,25 @@
 import './App.css';
 import { Intro, Navbar, Main, World, Input, Result} from './components';
 import { ResultProvider } from './components/Context/ResultContext';
-import { QuestionProvider } from './components/Context/QuestionContext'
+import { QuestionProvider } from './components/Context/QuestionContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Info from './pages/Info';
 
 function App() {
   return (
     <div className='App'>
       <QuestionProvider>
         <ResultProvider>
-          <div className='gradient__bg'>
-            <Navbar />
-            <div className='start'>
-              <Intro />
-              <World />
-              <Main />
+          <Router>
+            <div className='gradient__bg'>
+              <Navbar />
             </div>
-          </div>
-          <div className="second">
-            <Input />
-          </div>
-          <div>
-            <Result />
-          </div>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route exact path='/info/:country' element={<Info />} />
+            </Routes>
+          </Router>
         </ResultProvider>
       </QuestionProvider>
     </div>

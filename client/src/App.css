@@ -23,6 +23,14 @@ a {
   max-width:100%;
 }
 
+.information {
+  display: flex;
+  background: #02030f;
+  width: 100vw;
+  height: 100vh;
+  max-width:100%;
+}
+
 .gradient__bg
 {
     background: rgb(20, 0, 116)
