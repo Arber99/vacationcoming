@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getPICTUREs, getGPIcountry, getCLIcountry } from '../../api/index'
+import {findFlagUrlByCountryName} from 'country-flags-svg'
 import './Country.css'
 
 const Country = () => {
@@ -37,6 +38,7 @@ const Country = () => {
         fetchdata()
     }, []
     )
+    const flagUrl = findFlagUrlByCountryName(country);
 
     return (
         <div className='info'>
@@ -54,6 +56,7 @@ const Country = () => {
                     <a href={`https://www.alltrails.com/${country}`}><button className='info_button_green'>Show Trails</button></a>
                 </div>
             </div>
+            <img className='country-flag' src={flagUrl} />
         </div>
     )
 }
