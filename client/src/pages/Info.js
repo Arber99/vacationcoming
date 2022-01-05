@@ -3,7 +3,7 @@ import { Country } from '../components'
 
 const Info = () => {
     return (
-        <div className='start'>
+        <div className='start information'>
             <Country />
         </div>
     )
