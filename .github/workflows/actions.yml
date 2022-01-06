@@ -17,6 +17,11 @@ jobs:
       run:
         working-directory: ./server
 
+    env:
+      PORT: ${{ secrets.PORT }}
+      DATABASE_URI: ${{ secrets.DATABASE_URI }}
+      API_KEY: ${{ secrets.API_KEY}}
+
     strategy:
       matrix:
         node-version: [14.x]
@@ -25,10 +30,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      env:
-        PORT: ${{ secrets.PORT }}
-        DATABASE_URI: ${{ secrets.DATABASE_URI }}
-        API_KEY: ${{ secrets.API_KEY}}
       uses: actions/setup-node@v2
     - run: npm ci
     - run: npm run build --if-present
