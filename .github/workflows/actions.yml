@@ -29,4 +29,4 @@ jobs:
         cache-dependency-path: server/package-lock.json
     - run: cd server
     - run: npm install
-    # - run: npm test
+    - run: npm test

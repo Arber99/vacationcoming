@@ -21,7 +21,7 @@ app.use('/stat', stat)
 app.use('/pexel', pexel)
 
 app.get('/', (req, res) => {
-    res.send('API exists')
+    res.status(200).send('API exists')
 })
 
 const PORT = process.env.PORT || 5000
