@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon start",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "",

@@ -1,23 +1,41 @@
 import request from "supertest";
+import mongoose from 'mongoose';
 import app from './index'
 
 describe('GET /', () => {
 
-    test('Responds with a 200 status code', async () => {
-        return await request(app)
+    // beforeAll(done => {
+    //     done()
+    //   })
+
+    it('Responds with a 200 status code', async () => {
+        await request(app)
             .get('/')
             .expect(200)
+
     })
 
-    test('GPI List loads and responds with a 200 status code', async () => {
-        return await request(app)
+    it('GPI List loads and responds with a 200 status code', async () => {
+        await request(app)
             .get('/gpi/')
             .expect(200)
+
     })
 
-    test('CLI List loads and responds with a 200 status code', async () => {
-        return await request(app)
+    it('CLI List loads and responds with a 200 status code', async () => {
+        await request(app)
             .get('/coi/')
             .expect(200)
     })
+
+    // afterAll(done => {
+    //     // Closing the DB connection allows Jest to exit successfully.
+    //     try {
+    //         mongoose.connection.close();
+    //         done()
+    //     } catch (error) {
+    //         console.log(error);
+    //         done()
+    //     }
+    //   })
 })

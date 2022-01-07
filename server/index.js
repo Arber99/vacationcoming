@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.PORT || 5000
-
+//, () => console.log(`server is listening on PORT ${PORT}`)
 mongoose.connect(process.env.DATABASE_URI)
-    .then(() => app.listen((PORT), () => console.log(`server is listening on PORT ${PORT}`)))
+    .then(() => app.listen((PORT)))
     .catch((error) => console.log(error.message))
 
 export default app
