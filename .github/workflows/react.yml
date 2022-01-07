@@ -6,6 +6,8 @@ name: React Action
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'client/**'
   pull_request:
     branches: [ main, develop ]
 

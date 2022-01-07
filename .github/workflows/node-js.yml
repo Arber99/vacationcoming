@@ -6,6 +6,8 @@ name: Node.js Action
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'server/**'
   pull_request:
     branches: [ main, develop ]
 
