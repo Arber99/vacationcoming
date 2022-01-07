@@ -1,12 +1,10 @@
 name: React Deploy
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'client/**'
-  workflow_dispatch:
+on: workflow_dispatch
+
+defaults:
+  run:
+    working-directory: ./client
 
 jobs:
   build:
