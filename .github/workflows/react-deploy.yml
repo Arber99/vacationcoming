@@ -1,6 +1,11 @@
 name: React Deploy
 
-on: workflow_dispatch
+on:
+  push:
+    branches: main
+    paths:
+      - 'client/**'
+  workflow_dispatch:
 
 jobs:
   build:
