@@ -18,11 +18,14 @@ const Country = () => {
     const [cli, setCli] = useState(0)
     const [cliscore, setCliscore] = useState(0)
 
+    const [gpitext, setGpitext] = useState('(No GPI text available)')
+    const [clitext, setClitext] = useState('(No CLI text available)')
+
     useEffect(() => {
 
         const fetchdata = async() => {
             const con = await getPICTUREs(country)
-            setImage(con.data.photos[0].src.medium)
+            setImage(con.data.photos[0].src.large)
             setPhotographerURL(con.data.photos[0].photographer_url)
             setPhotographer(con.data.photos[0].photographer)
             setImageURL(con.data.photos[0].url)
@@ -38,6 +41,60 @@ const Country = () => {
         fetchdata()
     }, []
     )
+
+    useEffect(() => {
+        const setTexts = async() => {
+            if(gpiscore > 80) {
+                setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
+                This marks ${country} as a very safe country, making it safe to travel to.`)
+            }
+            else if(gpiscore > 60) {
+                setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
+                This marks ${country} as a moderately safe country, making it likely safe to travel to.`)
+            }
+            else if(gpiscore > 40) {
+                setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
+                This marks ${country} as a country with some risks. We recommend you to always be aware of your surroundings
+                and to not travel alone, if avoidable.`)
+            }
+            else if(gpiscore > 20) {
+                setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
+                This marks ${country} as a unsafe country with multiple risks. We do not recommend to travel into ${country}
+                if you are risk averse. For adventurous travellers, we recommend you to always be aware of your surroundings
+                and to not travel alone, if avoidable`)
+            }
+            else {
+                setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
+                As the GPI score indicates, it is absolutely unsafe to travel into ${country}. For your own safety, we would 
+                encourage you to reconsider your choice on ${country}`)
+            }
+
+
+            if(cliscore > 80) {
+                setClitext(`${country} is also very cheap. With a CLI score of ${cliscore}, financing a trip to ${country} should be
+                very easy.`)
+            }
+            else if(cliscore > 60) {
+                setClitext(`${country} is also cheap. With a CLI score of ${cliscore}, financing a trip to ${country} should be manageable
+                with a normal budget.`)
+            }
+            else if(cliscore > 40) {
+                setClitext(`${country} has an average score in the Cost of Living Index. With a CLI score of ${cliscore}, financing a trip to ${country} should be manageable
+                if you plan ahead.`)
+            }
+            else if(cliscore > 20) {
+                setClitext(`${country} is an expensive country. With a CLI score of ${cliscore}, financing a trip to ${country} should be difficult
+                and drain your money fast if uncautious.`)
+            }
+            else {
+                setClitext(`However, the Cost of Living Index has a score of ${cliscore}, ranking it on lower end out of all countries in the
+                Cost of Living Index. This makes ${country} a relatively expensive country, so you need to plan your budget ahead.`)
+            }
+        }
+
+        setTexts()
+    })
+
     const flagUrl = findFlagUrlByCountryName(country);
 
     return (
@@ -65,14 +122,23 @@ const Country = () => {
                         <p>Safety and Costs</p>
                     </div>
                     <div className='description'>
-                        <p>{country} ranks with a GPI score of {gpiscore} on place 23 of all countries in the Global Peace Index.
-                        This marks {country} as a very safe country, making it safe to travel to. However, the Cost of Living Index
-                        has a score of {cliscore}, ranking it on place 35 out of all countries. This makes {country} a relatively
-                        expensive country, so you need to plan your budget ahead.</p>
+                        <p>{gpitext} {clitext}</p>
                     </div>
                     <br />
-                    <p className='info_description'>GPI: {gpi}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{gpiscore} out of 100</p>
-                    <p className='info_description'>CLI: {cli}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{cliscore} out of 100</p>
+                    <table className='info_description'>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr>
+                            <td>GPI: {gpi}</td>
+                            <td>{gpiscore} out of 100</td>
+                        </tr>
+                        <tr>
+                            <td>CLI: {cli}</td>
+                            <td>{cliscore} out of 100</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

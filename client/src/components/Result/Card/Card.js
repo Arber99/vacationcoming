@@ -19,7 +19,7 @@ const Card = (props) => {
 
         const fetchdata = async() => {
             const con = await getPICTUREs(props.country)
-            setImage(con.data.photos[0].src.medium)
+            setImage(con.data.photos[0].src.large)
             setPhotographerURL(con.data.photos[0].photographer_url)
             setPhotographer(con.data.photos[0].photographer)
             setImageURL(con.data.photos[0].url)
