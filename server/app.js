@@ -1,3 +1,7 @@
+//! This code is made for the serverless architecture. It is almost indentical to the index.js
+//! This code is pushed to production
+
+import sls from 'serverless-http';
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
@@ -25,9 +29,8 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.PORT || 5000
-//, () => console.log(`server is listening on PORT ${PORT}`)
 mongoose.connect(process.env.DATABASE_URI)
 
-app.listen((PORT))
+const handler = sls(app)
 
-export default app
+export {handler}
