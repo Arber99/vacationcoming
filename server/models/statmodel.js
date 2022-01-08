@@ -5,6 +5,7 @@ const statSchema = mongoose.Schema({
     beach: Boolean,
     aurora: Boolean,
     snow: Boolean,
+    hiking: Boolean,
 })
 
 const stat = mongoose.model('stat', statSchema)
