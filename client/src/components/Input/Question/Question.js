@@ -47,6 +47,10 @@ export const Question = (props) => {
             param.push('?snow=true')
         }
 
+        if(document.getElementById('input6').checked) {
+            param.push('?hiking=true')
+        }
+
         var params = param.join('&')
 
         if(param.length === 0) {
@@ -83,7 +87,7 @@ export const Question = (props) => {
                     <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Hiking Trails
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input6'/>&nbsp;&nbsp;Hiking Trails
                 </label>
                 <label>
                     <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input5'/>&nbsp;&nbsp;Snow
