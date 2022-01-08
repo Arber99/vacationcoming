@@ -8,7 +8,7 @@ export const Main = () => {
             <div>
                 <br /><br />
                 <button type='button' className='button'>Let's start</button>
-                <br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br />
             </div>
         </div>
     )
