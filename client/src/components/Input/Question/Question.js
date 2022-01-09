@@ -96,10 +96,10 @@ export const Question = (props) => {
             <div className='question'>
                 <h2 className='title-white'>4. Do you prefer a specific continent?</h2>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;Yes
+                    <input type='radio' name='continent' className='input-checkbox' />&nbsp;&nbsp;Yes
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' />&nbsp;&nbsp;No
+                    <input type='radio' name='continent' className='input-checkbox' />&nbsp;&nbsp;No
                 </label>
             </div>
             <div className='submit'>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000"
+const url = "https://wa2w3fd9eg.execute-api.eu-central-1.amazonaws.com/production/"
 
 export const getGPIs = (val) => axios.get(`${url}/gpi/${val}`);
 export const getGPIcountry = (val) => axios.get(`${url}/gpi/country/${val}`);
