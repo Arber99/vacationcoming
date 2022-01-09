@@ -33,6 +33,7 @@ const Card = (props) => {
             setCli(stat.data)
         }
         fetchdata()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []
     )
 

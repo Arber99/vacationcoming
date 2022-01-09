@@ -25,6 +25,7 @@ const Result = () => {
             setResult(Object.values(arr))
         }
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [gpi, coi, stats]
     )
 

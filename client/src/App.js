@@ -1,5 +1,5 @@
 import './App.css';
-import { Intro, Navbar, Main, World, Input, Result, Warning} from './components';
+import { Navbar, Warning} from './components';
 import { ResultProvider } from './components/Context/ResultContext';
 import { QuestionProvider } from './components/Context/QuestionContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

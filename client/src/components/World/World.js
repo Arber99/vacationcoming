@@ -5,7 +5,7 @@ import './World.css'
 export const World = () => {
     return (
         <div>
-            <img className="world" src={world} />
+            <img alt='Worldmap' className="world" src={world} />
         </div>
     )
 }

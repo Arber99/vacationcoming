@@ -8,7 +8,7 @@ const Result = () => {
 
     const [result] = useContext(ResultContext)
     const {val4} = useContext(QuestionContext)
-    const [submit, setSubmit] = val4
+    const [submit,] = val4
 
     return (
         <div>

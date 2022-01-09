@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getPICTUREs, getGPIcountry, getCLIcountry } from '../../api/index'
 import {findFlagUrlByCountryName} from 'country-flags-svg'
 import './Country.css'
@@ -39,6 +39,7 @@ const Country = () => {
             setCli(stat.data)
         }
         fetchdata()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []
     )
 
@@ -115,7 +116,7 @@ const Country = () => {
                 </div>
                 <div>
                     <div className='inline'>
-                        <img className='country-flag' src={flagUrl} />
+                        <img alt='Flag of Country' className='country-flag' src={flagUrl} />
                         <h2 className='info_title'>{country}</h2>
                     </div>
                     <div className='description_title'>
