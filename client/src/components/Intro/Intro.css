@@ -13,3 +13,18 @@
 .title-orange {
     color: rgb(255, 192, 74);
 }
+
+@media screen and (max-width: 700px) {
+    .intro {
+        margin-right: 0.3rem;
+        margin-top: 3rem;
+        padding: 0.5rem 3rem;
+        float: left;
+    }
+    
+    .title-white-intro {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+    }
+  }
+  
