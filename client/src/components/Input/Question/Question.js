@@ -72,11 +72,21 @@ export const Question = (props) => {
         <div className='question-main'>
             <div className='question'>
                 <h2 className='title-white'>1. On a scale from 0 to 100, how safe should the country be?</h2>
-                <input className='input-basic' onChange={updateResult1} id='input1'></input>
+                <input 
+                    className='input-basic' 
+                    onChange={updateResult1} 
+                    onSubmitEditing ={updateResult1}
+                    multiline={false}
+                    id='input1'></input>
             </div>
             <div className='question'>
                 <h2 className='title-white'>2. On a scale from 0 to 100, how cheap should the country be?</h2>
-                <input className='input-basic' onChange={updateResult2} id='input2'></input>
+                <input 
+                    className='input-basic'
+                    onChange={updateResult2} 
+                    onSubmitEditing ={updateResult2}
+                    multiline={false}
+                    id='input2'></input>
             </div>
             <div className='question'>
                 <h2 className='title-white'>3. What is an absolute must for the country?</h2>
