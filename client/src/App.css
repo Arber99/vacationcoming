@@ -27,8 +27,8 @@ a {
 .information {
   display: flex;
   background: #02030f;
-  width: 100vw;
   height: 100vh;
+  max-height: 100%;
   max-width:100%;
 }
 

@@ -102,7 +102,7 @@ const Country = () => {
         <div className='title'>
             <h1>Information for {country}</h1>
             <div className='info'>
-                <div className='info_body'>
+                <div>
                     <div className='image_wrapper'>
                         <img className='info_image' alt='Country' src={image} />
                         <div className='text_wrapper'>

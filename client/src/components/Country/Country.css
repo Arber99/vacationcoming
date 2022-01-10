@@ -63,7 +63,7 @@ transition: transform 200ms ease-in;
   padding: 1rem 1rem;
   margin: 2rem 9rem;
   font-family: Helvetica;
-  color: rgb(20, 20, 20)
+  color: rgb(20, 20, 20);
 }
 
 .info_image {
@@ -166,4 +166,68 @@ cursor: pointer;
   width: 4rem;
   margin-left: 2rem;
   align-self: flex-start;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+      margin-right: 0.3rem;
+      margin-top: 3rem;
+      margin-left: 0rem;
+      padding: 0.5rem 1rem;
+      color: rgb(20, 20, 20);
+  }
+
+  .info {
+    margin-left: 0.3rem;
+    padding: 0.5rem 0rem;
+    border-radius: 0.2rem;
+    display: inline-block;
+    transition: transform 200ms ease-in;
+}
+
+  h1 {
+      font-size: 50px;
+  }
+
+  .info_image {
+    height: 18rem;
+    object-fit: cover;
+    width: 100%;
+    max-width: 18rem;
+    }
+
+  .info_button_wrapper {
+    display: block;
+  }
+  
+  .country-flag {
+    width: 4rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  .info_title {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-size: 30px;
+    color:rgb(235, 235, 235)
+    }
+
+  .description {
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+    max-width: 35rem;
+  }
+  
+  .description_title {
+    margin-left: 0rem;
+    margin-top: 1rem;
+    max-width: 35rem;
+    color:rgb(235, 235, 235)
+  }
+
+  .info_button_green {
+    margin-top: 1rem;
+    }
 }
