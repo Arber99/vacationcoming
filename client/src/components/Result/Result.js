@@ -13,7 +13,7 @@ const Result = () => {
 
     const loadMore = useCallback(() => {
         setMaxRange(prevRange => prevRange + 4);
-        console.log("Result: " +result.length + " and maxRange: " +maxRange)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[])
 
     return (

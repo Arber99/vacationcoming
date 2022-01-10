@@ -4,8 +4,8 @@ import './World.css'
 
 export const World = () => {
     return (
-        <div>
-            <img alt='Worldmap' className="world" src={world} />
+        <div className='world_wrapper'>
+            <img alt='Worldmap' className='world' src={world} />
         </div>
     )
 }
