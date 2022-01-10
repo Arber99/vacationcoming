@@ -63,6 +63,16 @@ label {
         padding: 0.5rem 3rem;
     }
 
+    .question label {
+        font-size: 20px;
+    }
+
+    .submit {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
     .input-basic {
         margin-top: 2rem;
         padding-bottom: 1rem;
@@ -77,5 +87,9 @@ label {
         font-family: Helvetica;
         font-weight: 600;
         color:rgb(255, 255, 255)
+    }
+
+    .title-white {
+        font-size: 20px;
     }
 }

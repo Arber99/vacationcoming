@@ -11,3 +11,15 @@
 .outcome-number {
     color:rgb(250, 113, 16)
 }
+
+@media screen and (max-width: 700px) {
+
+    .outcome {
+        display: flex;
+        float: left;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-size: 15px;
+        text-align: left;
+    }
+}
