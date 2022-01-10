@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Menu = () => (
     <>
-    <p><a href="/">FAQ</a></p>
+    <Link to={`/`}><p>Home</p></Link>
+    <Link to={`/faq`}><p>FAQ</p></Link>
     <p><a href="https://github.com/Arber99/vacationcoming">GitHub</a></p>
-    <p><a href="/">Contact</a></p>
+    {/* <p><a href="/">Contact</a></p> */}
     </>
 )
 

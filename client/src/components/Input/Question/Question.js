@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import './Question.css'
 import { getGPIs, getCOIs, getSTATs } from '../../../api'
 import { QuestionContext } from '../../Context/QuestionContext'
@@ -32,6 +32,12 @@ export const Question = (props) => {
         setCoi(formatter)
 
     }
+
+    useEffect(() => {
+        updateResult1(0)
+        updateResult2(0)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const updateStats = async() => {
         var param = []
@@ -77,7 +83,8 @@ export const Question = (props) => {
                     onChange={(e) => updateResult1(e.target.value)} 
                     onSubmitEditing ={(e) => updateResult1(e.target.value)}
                     multiline={false}
-                    id='input1'></input>
+                    id='input1'
+                    defaultValue={0}></input>
             </div>
             <div className='question'>
                 <h2 className='title-white question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the most expensive)</h2>
@@ -86,7 +93,8 @@ export const Question = (props) => {
                     onChange={(e) => updateResult2(e.target.value)} 
                     onSubmitEditing ={(e) => updateResult2(e.target.value)}
                     multiline={false}
-                    id='input2'></input>
+                    id='input2'
+                    defaultValue={0}></input>
             </div>
             <div className='question'>
                 <h2 className='title-white question_text'>3. What is an absolute must for the country you want to visit?</h2>
