@@ -27,9 +27,14 @@ a {
 .information {
   display: flex;
   background: #02030f;
-  height: 100vh;
-  max-height: 100%;
-  max-width:100%;
+  overflow: auto;
+}
+html { 
+  background: #02030f;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .gradient__bg
