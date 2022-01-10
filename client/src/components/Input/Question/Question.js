@@ -11,9 +11,9 @@ export const Question = (props) => {
     const [, setStats] = val3
     const [submit, setSubmit] = val4
 
-    const updateResult1 = async() => {
+    const updateResult1 = async(val) => {
 
-        const x = ((100 - document.getElementById('input1').value)*0.03075)+1.2
+        const x = ((100 - val)*0.03075)+1.2
 
         const number = await getGPIs(x);
         const formatter = []
@@ -22,9 +22,9 @@ export const Question = (props) => {
 
     }
 
-    const updateResult2 = async() => {
+    const updateResult2 = async(val) => {
 
-        const x = ((100 - document.getElementById('input2').value)*1.2563)+21.88
+        const x = ((100 - val)*1.2563)+21.88
 
         const number = await getCOIs(x);
         const formatter = []
@@ -74,8 +74,8 @@ export const Question = (props) => {
                 <h2 className='title-white'>1. On a scale from 0 to 100, how safe should the country be?</h2>
                 <input 
                     className='input-basic' 
-                    onChange={updateResult1} 
-                    onSubmitEditing ={updateResult1}
+                    onChange={(e) => updateResult1(e.target.value)} 
+                    onSubmitEditing ={(e) => updateResult1(e.target.value)}
                     multiline={false}
                     id='input1'></input>
             </div>
@@ -83,8 +83,8 @@ export const Question = (props) => {
                 <h2 className='title-white'>2. On a scale from 0 to 100, how cheap should the country be?</h2>
                 <input 
                     className='input-basic'
-                    onChange={updateResult2} 
-                    onSubmitEditing ={updateResult2}
+                    onChange={(e) => updateResult2(e.target.value)} 
+                    onSubmitEditing ={(e) => updateResult2(e.target.value)}
                     multiline={false}
                     id='input2'></input>
             </div>
