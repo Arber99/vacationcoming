@@ -87,7 +87,7 @@ export const Question = (props) => {
                     defaultValue={0}></input>
             </div>
             <div className='question'>
-                <h2 className='title-white question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the most expensive)</h2>
+                <h2 className='title-white question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the cheapest)</h2>
                 <input 
                     className='input-basic'
                     onChange={(e) => updateResult2(e.target.value)} 
