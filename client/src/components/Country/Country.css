@@ -1,11 +1,3 @@
-
-.wrapper {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(20rem, 24rem));
-gap: 1.5rem;
-justify-content: left;
-}
-
 .text_wrapper {
   margin-top: -1.8rem;
   margin-left: 0.8rem;
@@ -13,24 +5,36 @@ justify-content: left;
   font-size: 12px;
 }
 
-.title h1{
-  color: rgb(255, 255, 255);
+.title h1 {
+  color: white;
 }
 
 .info {
-overflow: hidden;
-/* box-shadow: 0 2px 20px #000000; */
-padding: 1rem 1rem;
-margin-top: 2rem;
-border-radius: 0.2rem;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-transition: transform 200ms ease-in;
-/* background-color: rgb(255, 255, 255); */
+  overflow: hidden;
+  /* box-shadow: 0 2px 20px #000000; */
+  padding: 1rem 1rem;
+  margin-top: 2rem;
+  border-radius: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  /* background-color: rgb(255, 255, 255); */
 }
 
 .inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -43,14 +47,14 @@ transition: transform 200ms ease-in;
 .description p {
   font-family: Helvetica;
   font-size: 18px;
-  color:rgb(235, 235, 235)
+  color: #ebebeb;
 }
 
 .description_title {
   margin-left: 2rem;
   margin-top: 1rem;
   max-width: 35rem;
-  color:rgb(235, 235, 235)
+  color: #ebebeb;
 }
 
 .description_title p {
@@ -63,82 +67,90 @@ transition: transform 200ms ease-in;
   padding: 1rem 1rem;
   margin: 2rem 9rem;
   font-family: Helvetica;
-  color: rgb(20, 20, 20);
+  color: #141414;
 }
 
 .info_image {
-height: 18rem;
-object-fit: cover;
-width: 100%;
-max-width: 34rem;
-border: 1px solid rgba(243, 243, 243, 0.2);
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-width: 34rem;
+  border: 1px solid rgba(243, 243, 243, 0.2);
 }
 
 .info_title {
-margin-left: 1rem;
-font-size: 30px;
-color:rgb(235, 235, 235)
+  margin-left: 1rem;
+  font-size: 30px;
+  color: #ebebeb;
 }
 
 .info_description {
-margin-left: 2rem;
-color:rgb(235, 235, 235)
+  margin-left: 2rem;
+  color: #ebebeb;
 }
 
 .info_description td {
   padding-right: 3rem;
-  }
+}
+
 .info_description th {
   padding-right: 3rem;
-  }
-
+}
 
 .info_button_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info_button {
-font-family: inherit;
-font-weight: bold;
-width: 12rem;
-height: 3rem;
-margin-top: 1rem;
-margin-bottom: 1rem;
-font-size: 1rem;
-border: 2px solid #4b00d5;
-background: transparent;
-color: #4b00d5;
-border-radius: 0.2rem;
-transition: background 200ms ease-in, color 200ms ease-in;
+  font-family: inherit;
+  font-weight: bold;
+  width: 12rem;
+  height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 2px solid #4b00d5;
+  background: transparent;
+  color: #4b00d5;
+  border-radius: 0.2rem;
+  -webkit-transition: background 200ms ease-in, color 200ms ease-in;
+  transition: background 200ms ease-in, color 200ms ease-in;
 }
 
 .info_button:hover {
-background: #4b00d5;
-color: white;
-cursor: pointer;
+  background: #4b00d5;
+  color: white;
+  cursor: pointer;
 }
 
 .info_button_green {
-font-family: inherit;
-font-weight: bold;
-width: 12rem;
-height: 3rem;
-margin-top: 2rem;
-font-size: 1rem;
-border: 2px solid #41b100;
-background: transparent;
-color: #41b100;
-border-radius: 0.2rem;
-transition: background 200ms ease-in, color 200ms ease-in;
-
+  font-family: inherit;
+  font-weight: bold;
+  width: 12rem;
+  height: 3rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border: 2px solid #41b100;
+  background: transparent;
+  color: #41b100;
+  border-radius: 0.2rem;
+  -webkit-transition: background 200ms ease-in, color 200ms ease-in;
+  transition: background 200ms ease-in, color 200ms ease-in;
 }
 
 .info_button_green:hover {
-background: #41b100;
-color: white;
-cursor: pointer;
+  background: #41b100;
+  color: white;
+  cursor: pointer;
 }
 
 .info_button_blue {
@@ -153,81 +165,80 @@ cursor: pointer;
   background: transparent;
   color: #007add;
   border-radius: 0.2rem;
+  -webkit-transition: background 200ms ease-in, color 200ms ease-in;
   transition: background 200ms ease-in, color 200ms ease-in;
-  }
-  
-  .info_button_blue:hover {
+}
+
+.info_button_blue:hover {
   background: #007add;
   color: white;
   cursor: pointer;
-  }
+}
 
 .country-flag {
   width: 4rem;
   margin-left: 2rem;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media screen and (max-width: 700px) {
   .title {
-      margin-right: 0.3rem;
-      margin-top: 3rem;
-      margin-left: 0rem;
-      padding: 0.5rem 1rem;
-      color: rgb(20, 20, 20);
+    margin-right: 0.3rem;
+    margin-top: 3rem;
+    margin-left: 0rem;
+    padding: 0.5rem 1rem;
+    color: #141414;
   }
-
   .info {
     margin-left: 0.3rem;
     padding: 0.5rem 0rem;
     border-radius: 0.2rem;
     display: inline-block;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    transition: -webkit-transform 200ms ease-in;
     transition: transform 200ms ease-in;
-}
-
-  h1 {
-      font-size: 50px;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
   }
-
+  h1 {
+    font-size: 50px;
+  }
   .info_image {
     height: 18rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     max-width: 18rem;
-    }
-
+  }
   .info_button_wrapper {
     display: block;
   }
-  
   .country-flag {
     width: 4rem;
     margin-left: 0rem;
     margin-top: 1rem;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
-
   .info_title {
     margin-left: 1rem;
     margin-top: 2rem;
     font-size: 30px;
-    color:rgb(235, 235, 235)
-    }
-
+    color: #ebebeb;
+  }
   .description {
     margin-left: 0rem;
     margin-top: 0.5rem;
     max-width: 35rem;
   }
-  
   .description_title {
     margin-left: 0rem;
     margin-top: 1rem;
     max-width: 35rem;
-    color:rgb(235, 235, 235)
+    color: #ebebeb;
   }
-
   .info_button_green {
     margin-top: 1rem;
-    }
+  }
 }
+/*# sourceMappingURL=Country.css.map */
