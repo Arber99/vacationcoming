@@ -1,27 +1,28 @@
 .world {
-    float: right;
-    height: 55%;
-    width: 55%;
-    margin-right: 8rem;
-    margin-top: 8rem;
+  float: right;
+  height: 55%;
+  width: 55%;
+  margin-right: 8rem;
+  margin-top: 8rem;
 }
 
 @media screen and (max-width: 700px) {
-    .world {
-        height: 80%;
-        width: 80%;
-        margin-right: 0rem;
-        margin-left: 1.5rem;
-        margin-top: 2rem;
-        margin-bottom: 0rem;
-        float: none;
-    }
-    
-    .world_wrapper {
-        display: block;
-        justify-content: center;
-        align-content: center;
-    }
-
+  .world {
+    height: 80%;
+    width: 80%;
+    margin-right: 0rem;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    float: none;
   }
-  
+  .world_wrapper {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+/*# sourceMappingURL=World.css.map */

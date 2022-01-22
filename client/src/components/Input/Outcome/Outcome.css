@@ -1,46 +1,33 @@
 .outcome {
-    margin-top: 5rem;
-    font-size: 1.5rem;
-    font-family: Helvetica;
-    font-weight: 600;
-    color:rgb(255, 255, 255);
-    display: flex;
-    float: right;
-
-    padding-top: 1rem;
-    border-top: 2px solid rgb(250, 113, 16);
-    padding-bottom: 1rem;
-    border-bottom: 2px solid rgb(250, 113, 16);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  padding-top: 1rem;
+  border-top: 2px solid #fa7110;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #fa7110;
 }
 
 .outcome-number {
-    color:rgb(250, 113, 16)
-}
-
-@media screen and (max-width: 1700px) {
-
-    .outcome {
-        display: inline-block;
-        align-content: center;
-        margin-left: 2rem;
-        margin-top: 1rem;
-        font-size: 15px;
-        float: none;
-        text-align: center;
-        justify-content: center;
-    }
+  color: #ffc04a;
 }
 
 @media screen and (max-width: 700px) {
-
-    .outcome {
-        display: inline-block;
-        float: none;
-        align-content: center;
-        justify-content: center;
-        margin-left: 1.5rem;
-        margin-top: 1rem;
-        font-size: 15px;
-        text-align: center;
-    }
+  .outcome {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1rem;
+    font-size: 15px;
+    text-align: center;
+  }
 }
+/*# sourceMappingURL=Outcome.css.map */

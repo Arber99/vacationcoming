@@ -16,10 +16,8 @@ function App() {
           <ResultProvider>
 
             <Router>
-              <div className='gradient__bg'>
-                <Navbar />
-              </div>
-              <Warning />
+              <Navbar />
+              {/* <Warning /> */}
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/info/:country' element={<Info />} />

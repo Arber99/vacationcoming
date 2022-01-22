@@ -1,0 +1,71 @@
+@import '../../../utilities/variables';
+
+.question-main {
+    float: left;
+    padding: 1.5rem 9rem;
+}
+
+.question {
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+}
+
+.input-basic {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    height: 4rem;
+    width: 10rem;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid $buttonorange;
+    background: none;
+
+    font-size: $questionfontL;
+    font-weight: 600;
+    color: $textwhite;
+}
+
+.input-checkbox {
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+label {
+    display: flex;
+    align-items: flex-end;
+
+    font-size: $questionfontM;
+    font-weight: 600;
+    color: $textwhite;
+  }
+
+.question_text {
+    max-width: 50rem;
+    font-size: $questionfontM;
+    color: $textwhite;
+}
+
+@media screen and (max-width: 700px) {
+
+    .question {
+        margin-right: 0.3rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .question-main {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .question label {
+        font-size: $questionfontS;
+    }
+
+    .question_text {
+        font-size: $questionfontS;
+        color: $textwhite;
+    }
+
+}

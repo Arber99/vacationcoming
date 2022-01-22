@@ -1,31 +1,20 @@
 .intro {
-    margin-right: 2rem;
-    margin-top: 8rem;
-    padding-left: 9rem;
-    float: left;
+  margin-right: 2rem;
+  margin-top: 8rem;
+  padding-left: 9rem;
+  float: left;
 }
 
-.title-white-intro {
-    color: rgb(255, 255, 255);
-    font-size: 70px;
-}
-
-.title-orange {
-    color: rgb(255, 192, 74);
+.title-orange-intro {
+  color: #ffc04a;
 }
 
 @media screen and (max-width: 700px) {
-    .intro {
-        margin-top: 2rem;
-        margin-left: 2.5rem;
-        margin-right: 0rem;
-        padding-left: 0rem;
-        float: left;
-    }
-    
-    .title-white-intro {
-        color: rgb(255, 255, 255);
-        font-size: 40px;
-    }
+  .intro {
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 0rem;
+    padding-left: 0rem;
   }
-  
+}
+/*# sourceMappingURL=Intro.css.map */

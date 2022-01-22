@@ -77,7 +77,7 @@ export const Question = (props) => {
     return (
         <div className='question-main'>
             <div className='question'>
-                <h2 className='title-white question_text'>1. Enter a value between 1 and 100 that should represent the safety of the country (100 being the most safe)</h2>
+                <h2 className='question_text'>1. Enter a value between 1 and 100 that should represent the safety of the country (100 being the most safe)</h2>
                 <input 
                     className='input-basic' 
                     onChange={(e) => updateResult1(e.target.value)} 
@@ -87,7 +87,7 @@ export const Question = (props) => {
                     defaultValue={0}></input>
             </div>
             <div className='question'>
-                <h2 className='title-white question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the cheapest)</h2>
+                <h2 className='question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the cheapest)</h2>
                 <input 
                     className='input-basic'
                     onChange={(e) => updateResult2(e.target.value)} 
@@ -97,7 +97,7 @@ export const Question = (props) => {
                     defaultValue={0}></input>
             </div>
             <div className='question'>
-                <h2 className='title-white question_text'>3. What is an absolute must for the country you want to visit?</h2>
+                <h2 className='question_text'>3. What is an absolute must for the country you want to visit?</h2>
                 <label>
                     <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input3'/>&nbsp;&nbsp;A Beach
                 </label>
@@ -111,7 +111,13 @@ export const Question = (props) => {
                     <input type='checkbox' className='input-checkbox' onChange={updateStats} id='input5'/>&nbsp;&nbsp;Snow
                 </label>
             </div>
-            {/* <div className='title-white question_text'>
+            <div>
+                {(!submit) ? 
+                (<button type='button' className='button' onClick={submitForm}>Submit parameters</button>):
+                (<button type='button' className='button_submit'>Submitted</button>)}
+            </div>
+
+            {/* <div className='question_text'>
                 <h2 className='title-white'>4. Do you prefer a specific continent?</h2>
                 <label>
                     <input type='radio' name='continent' className='input-checkbox' />&nbsp;&nbsp;Yes
@@ -120,11 +126,6 @@ export const Question = (props) => {
                     <input type='radio' name='continent' className='input-checkbox' />&nbsp;&nbsp;No
                 </label>
             </div> */}
-            <div className='submit'>
-                {(!submit) ? 
-                (<button type='button' className='button' onClick={submitForm}>Submit parameters</button>):
-                (<button type='button' className='button-submitted'>Submitted</button>)}
-            </div>
         </div>
     )
 }

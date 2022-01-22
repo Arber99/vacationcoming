@@ -1,76 +1,44 @@
 .main {
-    margin-right: 2rem;
-    margin-top: 18rem;
-    padding: 10rem 9rem;
-    color: rgb(255, 255, 255);
-    font-family: Helvetica;
-    font-weight: 600;
-    font-size: 28px;
-
+  margin-right: 2rem;
+  margin-top: 20rem;
+  padding: 10rem 9rem;
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
 }
 
-.number {
-    color:rgb(232, 255, 28);
+.main p {
+  margin-bottom: 5rem;
+}
+
+.main p span {
+  color: #e8ff1c;
 }
 
 .main-text {
-    display: flex;
-    flex-direction: row;
-}
-.button {
-    font-family: inherit;
-    font-weight: bold;
-    width: 14rem;
-    height: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border: 2px solid rgb(233, 152, 1);
-    background: transparent;
-    color: rgb(233, 152, 1);
-    border-radius: 0.2rem;
-    transition: background 200ms ease-in, color 200ms ease-in;
-    }
-    
-.button:hover {
-    background: rgb(233, 152, 1);
-    color: white;
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-.button-submitted {
-    font-family: inherit;
-    font-weight: bold;
-    width: 14rem;
-    height: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border: 2px solid rgb(1, 233, 40);
-    background: transparent;
-    color: rgb(1, 233, 40);
-    border-radius: 0.2rem;
-    transition: background 200ms ease-in, color 200ms ease-in;
-    }
-    
-.button-submitted:hover {
-    transform: scale(1.02);
-    cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media screen and (max-width: 700px) {
-    .main {
-        margin-right: 0.3rem;
-        margin-top: 3rem;
-        padding: 0.5rem 3rem;
-    }
-
-    .button_start_wrapper {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
-    }
-
+  .main {
+    margin-right: 0.3rem;
+    margin-top: 3rem;
+    padding: 0.5rem 3rem;
   }
-  
+  .button_start_wrapper {
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=Main.css.map */

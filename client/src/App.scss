@@ -1,6 +1,7 @@
+@import './utilities/variables.scss';
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   scroll-behavior: smooth;
   font-family: Helvetica;
@@ -19,24 +20,25 @@ a {
   vertical-align: left;
   display: inline-block;
   width: 100vw;
-  max-width: 100%;
+  max-width: 100%
 }
 
 .information {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background: #02030f;
   overflow: auto;
 }
-
-html {
+html { 
   background: #02030f;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
-.gradient__bg {
-  background: #140074;
+.gradient__bg
+{
+    background: rgb(20, 0, 116);
 }
 
 .gradient__text {
@@ -55,11 +57,11 @@ html {
 }
 
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.button, .button_submit {
+.button {
   font-family: inherit;
   font-weight: bold;
   width: 14rem;
@@ -67,64 +69,61 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1rem;
-  border: 2px solid #e99801;
+  border: 2px solid $buttonorange;
   background: transparent;
-  color: #e99801;
+  color: $buttonorange;
   border-radius: 0.2rem;
-  -webkit-transition: background 200ms ease-in, color 200ms ease-in;
   transition: background 200ms ease-in, color 200ms ease-in;
-}
 
-.button:hover, .button_submit:hover {
-  background: #e99801;
-  color: white;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  cursor: pointer;
+  &:hover {
+      background: $buttonorange;
+      color: white;
+      transform: scale(1.02);
+      cursor: pointer;
+  }
 }
 
 .button_submit {
-  border: 2px solid #01e928;
-  color: #01e928;
-}
+  @extend .button;
+  border: 2px solid $buttongreen;
+  color: $buttongreen;
 
-.button_submit:hover {
-  background: none;
-  color: #01e928;
-  -webkit-transform: none;
-          transform: none;
-  cursor: default;
+  &:hover {
+      background: none;
+      color: $buttongreen;
+      transform: none;
+      cursor: default;
+  }
 }
 
 .title-white {
-  color: white;
-  font-size: 70px;
+  color: $textwhite;
+  font-size: $titlefontM;
 }
 
 .title-orange {
-  color: #ffc04a;
-  font-size: 70px;
+  color: $textorange;
+  font-size: $titlefontM;
 }
 
-@-webkit-keyframes scale-up-center {
+ @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+            transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
-
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+            transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -135,11 +134,13 @@ html {
   .section_margin {
     margin: 4rem;
   }
+
   .title-white {
-    font-size: 40px;
+    font-size: $titlefontS;
   }
+
   .title-orange {
-    font-size: 40px;
+    font-size: $titlefontS;
   }
 }
 
@@ -151,4 +152,3 @@ html {
     margin: 4rem 2rem;
   }
 }
-/*# sourceMappingURL=App.css.map */

@@ -17,13 +17,8 @@ export const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <div className='navbar-links'>
-                <div className='navbar-links_logo'>
-                    {/* <img src={logo} alt='logo' /> */}
-                </div>
-                <div className='navbar-links_container'>
-                    <Menu />
-                </div>
+            <div className='navbar-links_container'>
+                <Menu />
             </div>
             <div className='navbar-menu'>
                 {

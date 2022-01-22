@@ -1,22 +1,16 @@
 .input {
-    margin-right: 2rem;
-    margin-top: 4rem;
-    padding: 2rem 9rem;
-    font-size: 70px;
-}
-
-.title-white {
-    color: rgb(255, 255, 255);
+  margin-right: 2rem;
+  margin-top: 4rem;
+  padding: 2rem 9rem;
+  font-size: 70px;
 }
 
 @media screen and (max-width: 700px) {
-    .input {
-        margin-right: 0.3rem;
-        margin-top: 3rem;
-        padding: 0.5rem 3rem;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
+  .input {
+    margin-right: 0.3rem;
+    margin-top: 3rem;
+    padding: 0.5rem 3rem;
+    font-size: 40px;
+  }
 }
+/*# sourceMappingURL=Input.css.map */

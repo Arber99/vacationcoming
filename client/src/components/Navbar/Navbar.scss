@@ -1,0 +1,71 @@
+@use '../../utilities/variables';
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 9rem;
+    background-color: $bluebackground;
+    border-bottom: 1px solid rgba(243, 243, 243, 0.2);
+}
+
+.navbar-links_container {
+    display: flex;
+
+    p {
+        font-weight: 600;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+}
+
+.navbar-menu {
+    margin-left: 1rem;
+    display: none;
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: $bluebackground;
+    border: 1px solid rgba(243, 243, 243, 0.2);
+    padding: 1rem;
+    position: absolute;
+    right: 1rem;
+    margin-top: 4.5rem;
+    min-width: 100px;
+
+    p {
+        margin: 1rem 0;
+    }
+}
+
+a {
+    color: rgb(238, 238, 238);
+
+    &:hover {
+        color: rgb(255, 255, 255)
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .navbar {
+        padding: 2rem 1rem;
+        justify-content: flex-end;
+    }
+
+    .navbar-links_container {
+        display: none;
+    }
+
+    .navbar-menu {
+        display: flex;
+    }
+}

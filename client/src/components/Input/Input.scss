@@ -1,0 +1,17 @@
+@import '../../utilities/variables';
+
+.input {
+    margin-right: 2rem;
+    margin-top: 4rem;
+    padding: 2rem 9rem;
+    font-size: $titlefontM;
+}
+
+@media screen and (max-width: 700px) {
+    .input {
+        margin-right: 0.3rem;
+        margin-top: 3rem;
+        padding: 0.5rem 3rem;
+        font-size: $titlefontS;
+    }
+}

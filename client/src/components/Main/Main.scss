@@ -1,0 +1,41 @@
+@import '../../utilities/variables';
+
+.main {
+    margin-right: 2rem;
+    margin-top: 20rem;
+    padding: 10rem 9rem;
+    color: $textwhite;
+    font-weight: 600;
+    font-size: 28px;
+
+    p {
+        margin-bottom: 5rem;
+
+        span {
+            color:rgb(232, 255, 28);
+        }
+    }
+
+}
+
+.main-text {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen and (max-width: 700px) {
+    .main {
+        margin-right: 0.3rem;
+        margin-top: 3rem;
+        padding: 0.5rem 3rem;
+    }
+
+    .button_start_wrapper {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+  }
+  

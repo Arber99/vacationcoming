@@ -1,0 +1,32 @@
+@import '../../../utilities/variables';
+
+.outcome {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: $questionfontS;
+    font-weight: 600;
+    color: $textwhite;
+    display: flex;
+    float: left;
+
+    padding-top: 1rem;
+    border-top: 2px solid rgb(250, 113, 16);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(250, 113, 16);
+}
+
+.outcome-number {
+    color: $textorange;
+}
+
+@media screen and (max-width: 700px) {
+
+    .outcome {
+        display: flex;
+        margin-top: 1rem;
+        font-size: $questionfontXS;
+        text-align: center;
+    }
+}
