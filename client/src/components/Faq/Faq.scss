@@ -1,0 +1,24 @@
+@import '../../utilities/variables';
+
+.faqs {
+    margin: 2rem 9rem;
+    position: relative;
+    padding-right: 80px;
+
+    h1 {
+        font-size: $titlefontS;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.faq {
+    color: $textwhite;
+    position: relative;
+    padding-right: 80px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 1rem;
+    background-color: $textblue;
+    max-width: 60rem;
+    border: 1px solid rgba(243, 243, 243, 0.2);
+}

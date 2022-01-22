@@ -6,3 +6,4 @@ export { default as Input } from './Input/Input';
 export { default as Result } from './Result/Result';
 export { default as Country } from './Country/Country';
 export { default as Warning } from './Warning/Warning';
+export { default as Faq } from './Faq/Faq';

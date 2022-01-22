@@ -1,0 +1,39 @@
+.faq-question {
+  position: relative;
+  font-size: 20px;
+  padding-right: 80px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.faq-question::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.faq.open .faq-question {
+  margin-bottom: 15px;
+}
+
+.faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.faq-answer {
+  font-size: 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/*# sourceMappingURL=Faqsingle.css.map */
