@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Warning} from './components';
+import { Navbar } from './components';
 import { ResultProvider } from './components/Context/ResultContext';
 import { QuestionProvider } from './components/Context/QuestionContext';
 import { MainProvider } from './components/Context/MainContext';
