@@ -1,4 +1,4 @@
-@use '../../utilities/variables';
+@import '../../utilities/variables';
 
 .navbar {
     display: flex;
@@ -67,5 +67,6 @@ a {
 
     .navbar-menu {
         display: flex;
+        z-index: 1;
     }
 }
