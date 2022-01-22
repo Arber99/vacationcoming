@@ -59,7 +59,7 @@ html {
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.button, .button_submit, .button_info, .button_load {
+.button, .button_submit, .button_info, .button_load, .button_gmaps, .button_trails {
   font-family: inherit;
   font-weight: bold;
   width: 14rem;
@@ -75,7 +75,7 @@ html {
   transition: background 200ms ease-in, color 200ms ease-in;
 }
 
-.button:hover, .button_submit:hover, .button_info:hover, .button_load:hover {
+.button:hover, .button_submit:hover, .button_info:hover, .button_load:hover, .button_gmaps:hover, .button_trails:hover {
   background: #e99801;
   color: white;
   -webkit-transform: scale(1.02);
@@ -96,14 +96,14 @@ html {
   cursor: default;
 }
 
-.button_info, .button_load {
+.button_info, .button_load, .button_gmaps, .button_trails {
   border: 2px solid #4b00d5;
   color: #4b00d5;
   width: 12rem;
   height: 3rem;
 }
 
-.button_info:hover, .button_load:hover {
+.button_info:hover, .button_load:hover, .button_gmaps:hover, .button_trails:hover {
   background: #4b00d5;
 }
 
@@ -114,6 +114,24 @@ html {
 
 .button_load:hover {
   background: #e99801;
+}
+
+.button_gmaps {
+  border: 2px solid #007add;
+  color: #007add;
+}
+
+.button_gmaps:hover {
+  background: #007add;
+}
+
+.button_trails {
+  border: 2px solid #01e928;
+  color: #01e928;
+}
+
+.button_trails:hover {
+  background: #01e928;
 }
 
 .title-white {

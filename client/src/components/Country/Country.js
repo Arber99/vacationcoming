@@ -102,16 +102,14 @@ const Country = () => {
         <div className='title'>
             <h1>Information for {country}</h1>
             <div className='info'>
-                <div>
-                    <div className='image_wrapper'>
-                        <img className='info_image' alt='Country' src={image} />
-                        <div className='text_wrapper'>
-                            <p><a href={imageURL}>Photo</a> taken by <a href={photographerURL}>{photographer}</a> on Pexels</p>
-                        </div>
+                <div className='stats'>
+                    <img className='info_image' alt='Country' src={image} />
+                    <div className='text_wrapper'>
+                        <p><a href={imageURL}>Photo</a> taken by <a href={photographerURL}>{photographer}</a> on Pexels</p>
                     </div>
                     <div className='info_button_wrapper'>
-                        <a href={`https://www.google.com/maps/place/${country}`}><button className='info_button_blue'>Google Maps</button></a>
-                        <a href={`https://www.alltrails.com/${country}`}><button className='info_button_green'>Show Trails</button></a>
+                        <a href={`https://www.google.com/maps/place/${country}`}><button className='button_gmaps'>Google Maps</button></a>
+                        <a href={`https://www.alltrails.com/${country}`}><button className='button_trails'>Show Trails</button></a>
                     </div>
                 </div>
                 <div>

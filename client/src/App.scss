@@ -118,6 +118,26 @@ html {
     }
   }
 
+.button_gmaps {
+  @extend .button_info;
+  border: 2px solid $buttonblue;
+  color: $buttonblue;
+
+  &:hover {
+    background: $buttonblue;
+    }
+  }
+
+.button_trails {
+  @extend .button_info;
+  border: 2px solid $buttongreen;
+  color: $buttongreen;
+
+  &:hover {
+    background: $buttongreen;
+    }
+  }
+
 .title-white {
   color: $textwhite;
   font-size: $titlefontM;
