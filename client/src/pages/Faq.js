@@ -1,9 +1,11 @@
 import React from 'react'
-import { Faq } from '../components'
+import { Faqpage } from '../components'
 
 const FAQ = () => {
     return (
-        <Faq />
+        <div>
+            <Faqpage />
+        </div>
     )
 }
 
