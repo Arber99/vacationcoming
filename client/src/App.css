@@ -59,7 +59,7 @@ html {
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.button, .button_submit {
+.button, .button_submit, .button_info, .button_load {
   font-family: inherit;
   font-weight: bold;
   width: 14rem;
@@ -75,7 +75,7 @@ html {
   transition: background 200ms ease-in, color 200ms ease-in;
 }
 
-.button:hover, .button_submit:hover {
+.button:hover, .button_submit:hover, .button_info:hover, .button_load:hover {
   background: #e99801;
   color: white;
   -webkit-transform: scale(1.02);
@@ -96,6 +96,26 @@ html {
   cursor: default;
 }
 
+.button_info, .button_load {
+  border: 2px solid #4b00d5;
+  color: #4b00d5;
+  width: 12rem;
+  height: 3rem;
+}
+
+.button_info:hover, .button_load:hover {
+  background: #4b00d5;
+}
+
+.button_load {
+  border: 2px solid #e99801;
+  color: #e99801;
+}
+
+.button_load:hover {
+  background: #e99801;
+}
+
 .title-white {
   color: white;
   font-size: 70px;
@@ -103,6 +123,11 @@ html {
 
 .title-orange {
   color: #ffc04a;
+  font-size: 70px;
+}
+
+.title-black {
+  color: black;
   font-size: 70px;
 }
 
@@ -139,6 +164,9 @@ html {
     font-size: 40px;
   }
   .title-orange {
+    font-size: 40px;
+  }
+  .title-black {
     font-size: 40px;
   }
 }

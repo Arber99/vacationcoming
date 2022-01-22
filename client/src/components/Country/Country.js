@@ -62,12 +62,12 @@ const Country = () => {
                 setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
                 This marks ${country} as a unsafe country with multiple risks. We do not recommend to travel into ${country}
                 if you are risk averse. For adventurous travellers, we recommend you to always be aware of your surroundings
-                and to not travel alone, if avoidable`)
+                and to not travel alone, if avoidable.`)
             }
             else {
                 setGpitext(`${country} has a translated GPI score of ${gpiscore} out of 100 in the Global Peace Index.
                 As the GPI score indicates, it is absolutely unsafe to travel into ${country}. For your own safety, we would 
-                encourage you to reconsider your choice on ${country}`)
+                encourage you to reconsider your choice on ${country}.`)
             }
 
 

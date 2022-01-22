@@ -96,6 +96,28 @@ html {
   }
 }
 
+.button_info {
+  @extend .button;
+  border: 2px solid $buttonpurple;
+  color: $buttonpurple;
+  width: 12rem;
+  height: 3rem;
+
+  &:hover {
+    background: $buttonpurple;
+    }
+  }
+
+.button_load {
+  @extend .button_info;
+  border: 2px solid $buttonorange;
+  color: $buttonorange;
+
+  &:hover {
+    background: $buttonorange;
+    }
+  }
+
 .title-white {
   color: $textwhite;
   font-size: $titlefontM;
@@ -103,6 +125,11 @@ html {
 
 .title-orange {
   color: $textorange;
+  font-size: $titlefontM;
+}
+
+.title-black {
+  color: $textblack;
   font-size: $titlefontM;
 }
 
@@ -140,6 +167,10 @@ html {
   }
 
   .title-orange {
+    font-size: $titlefontS;
+  }
+
+  .title-black {
     font-size: $titlefontS;
   }
 }

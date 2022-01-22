@@ -26,12 +26,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
   -webkit-transition: -webkit-transform 200ms ease-in;
   transition: -webkit-transform 200ms ease-in;
   transition: transform 200ms ease-in;
   transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
   background-color: white;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .card_image {
@@ -59,33 +63,5 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.card_button {
-  font-family: inherit;
-  font-weight: bold;
-  width: 12rem;
-  height: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  border: 2px solid #4b00d5;
-  background: transparent;
-  color: #4b00d5;
-  border-radius: 0.2rem;
-  -webkit-transition: background 200ms ease-in, color 200ms ease-in;
-  transition: background 200ms ease-in, color 200ms ease-in;
-}
-
-.card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  cursor: default;
-}
-
-.card_button:hover {
-  background: #4b00d5;
-  color: white;
-  cursor: pointer;
 }
 /*# sourceMappingURL=Card.css.map */
