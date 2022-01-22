@@ -6,7 +6,7 @@ import { MainProvider } from './components/Context/MainContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Info from './pages/Info';
-import FAQ from './pages/FAQ';
+import Faq from './pages/Faq';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/info/:country' element={<Info />} />
-                <Route exact path='/faq' element={<FAQ />} />
+                <Route exact path='/faq' element={<Faq />} />
               </Routes>
             </Router>
 

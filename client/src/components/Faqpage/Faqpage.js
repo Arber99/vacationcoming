@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Faq.css';
+import './Faqpage.css';
 import Faqsingle from './Faqsingle/Faqsingle';
 
 const Faq = () => {
