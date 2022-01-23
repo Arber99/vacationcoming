@@ -5,7 +5,7 @@ import App from '../App';
 test("Submit question form", async () => {
   render(<App />);
   const linkElement = screen.getByRole('button', {name: /Submit Parameters/i});
-  // userEvent.click(linkElement);
-  // const result = screen.getByTestId('recommendations');
-  // expect(result).toBeInTheDocument();
+  userEvent.click(linkElement);
+  const result = screen.getByTestId('recommendations');
+  expect(result).toBeInTheDocument();
 });
