@@ -19,7 +19,7 @@ const Result = () => {
     return (
         <div>
             {(submit)? (<div className='result'>
-                <h1 className='title-black'>We recommend the following countries to you</h1>
+                <h1 data-testid="recommendations" className='title-black'>We recommend the following countries to you</h1>
                 <div className='wrapper'>
                     {result.slice(0, maxRange).map((value) => (
                         <Card country={value} key={value} />

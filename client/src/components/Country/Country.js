@@ -94,7 +94,8 @@ const Country = () => {
         }
 
         setTexts()
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const flagUrl = findFlagUrlByCountryName(country);
 
