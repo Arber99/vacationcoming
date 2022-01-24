@@ -30,7 +30,7 @@ const Card = (props) => {
 
             var stats = null
             try {
-                var stats = await getGPIcountry(props.country)
+                stats = await getGPIcountry(props.country)
                 setGpiscore(Math.round((100 - (stats.data - 1.2)/0.03075)))
                 setGpi(stats.data)
             } catch (err) {
