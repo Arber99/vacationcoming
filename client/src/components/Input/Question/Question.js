@@ -99,7 +99,7 @@ export const Question = (props) => {
                     onChange={(e) => updateResult1(e.target.value)} 
                     //onSubmitEditing ={(e) => updateResult1(e.target.value)}
                     //multiline={false}
-                    label='input1'
+                    data-testid='input1'
                     id='input1'
                     defaultValue={0}></input>
             </div>
@@ -110,23 +110,23 @@ export const Question = (props) => {
                     onChange={(e) => updateResult2(e.target.value)} 
                     //onSubmitEditing ={(e) => updateResult2(e.target.value)}
                     //multiline={false}
-                    label='input2'
+                    data-testid='input2'
                     id='input2'
                     defaultValue={0}></input>
             </div>
             <div className='question'>
                 <h2 className='question_text'>3. What is an absolute must for the country you want to visit?</h2>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateStats} label='input3' id='input3'/>&nbsp;&nbsp;A Beach
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} data-testid='input3' id='input3'/>&nbsp;&nbsp;A Beach
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateStats} label='input4' id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} data-testid='input4' id='input4'/>&nbsp;&nbsp;Northern or Southern Lights
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateStats} label='input5' id='input5'/>&nbsp;&nbsp;Snow
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} data-testid='input5' id='input5'/>&nbsp;&nbsp;Snow
                 </label>
                 <label>
-                    <input type='checkbox' className='input-checkbox' onChange={updateStats} label='input6' id='input6'/>&nbsp;&nbsp;Hiking Trails
+                    <input type='checkbox' className='input-checkbox' onChange={updateStats} data-testid='input6' id='input6'/>&nbsp;&nbsp;Hiking Trails
                 </label>
             </div>
             <div>

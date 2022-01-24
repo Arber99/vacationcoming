@@ -56,7 +56,7 @@ const Faq = () => {
 
   return (
   <div className='faqs'>
-      <h1 className='title-white'>FAQ</h1>
+      <h1 className='title-white' data-testid='faq'>FAQ</h1>
       {faqs.map((faq, i) => (
           <Faqsingle faq={faq} index={i} toggleFAQ={toggleFAQ} />
       ))}

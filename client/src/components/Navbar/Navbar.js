@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => (
     <>
-    <Link to={`/`}><p>Home</p></Link>
-    <Link to={`/faq`}><p>FAQ</p></Link>
+    <Link to={`/`} data-testid='Home'><p>Home</p></Link>
+    <Link to={`/faq`} data-testid='FAQ'><p>FAQ</p></Link>
     <p><a href="https://github.com/Arber99/vacationcoming">GitHub</a></p>
     {/* <p><a href="/">Contact</a></p> */}
     </>
