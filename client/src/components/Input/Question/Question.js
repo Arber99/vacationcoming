@@ -23,7 +23,6 @@ export const Question = (props) => {
             setGpi(formatter)
         }
         catch (err) {
-            console.log("Hi")
         }
 
     }
@@ -40,7 +39,6 @@ export const Question = (props) => {
             setCoi(formatter)
         }
         catch (err) {
-            console.log("Hi")
         }
 
     }
