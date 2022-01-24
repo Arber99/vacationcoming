@@ -126,18 +126,20 @@ const Country = () => {
                     </div>
                     <br />
                     <table className='info_description'>
-                        <tr>
-                            <th>Topic</th>
-                            <th>Score</th>
-                        </tr>
-                        <tr>
-                            <td>GPI: {gpi}</td>
-                            <td>{gpiscore} out of 100</td>
-                        </tr>
-                        <tr>
-                            <td>CLI: {cli}</td>
-                            <td>{cliscore} out of 100</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Topic</th>
+                                <th>Score</th>
+                            </tr>
+                            <tr>
+                                <td>GPI: {gpi}</td>
+                                <td>{gpiscore} out of 100</td>
+                            </tr>
+                            <tr>
+                                <td>CLI: {cli}</td>
+                                <td>{cliscore} out of 100</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
