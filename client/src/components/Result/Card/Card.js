@@ -18,9 +18,9 @@ const Card = (props) => {
     useEffect(() => {
 
         const fetchdata = async() => {
-            const con = null
+            var con = null
             try {
-                await getPICTUREs(props.country)
+                con = await getPICTUREs(props.country)
                 setImage(con.data.photos[0].src.large)
                 setPhotographerURL(con.data.photos[0].photographer_url)
                 setPhotographer(con.data.photos[0].photographer)
@@ -29,18 +29,18 @@ const Card = (props) => {
                 console.log("Hi")
             }
 
-            const stats = null
+            var stats = null
             try {
-                await getGPIcountry(props.country)
+                var stats = await getGPIcountry(props.country)
                 setGpiscore(Math.round((100 - (stats.data - 1.2)/0.03075)))
                 setGpi(stats.data)
             } catch (err) {
                 console.log("Hi")
             }
 
-            const stat = null
+            var stat = null
             try {
-                await getCLIcountry(props.country)
+                stat = await getCLIcountry(props.country)
                 setCliscore(Math.round((100 - (stat.data - 21.88)/1.2563)))
                 setCli(stat.data)
             } catch (err) {
