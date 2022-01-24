@@ -18,19 +18,34 @@ const Card = (props) => {
     useEffect(() => {
 
         const fetchdata = async() => {
-            const con = await getPICTUREs(props.country)
-            setImage(con.data.photos[0].src.large)
-            setPhotographerURL(con.data.photos[0].photographer_url)
-            setPhotographer(con.data.photos[0].photographer)
-            setImageURL(con.data.photos[0].url)
+            const con = null
+            try {
+                await getPICTUREs(props.country)
+                setImage(con.data.photos[0].src.large)
+                setPhotographerURL(con.data.photos[0].photographer_url)
+                setPhotographer(con.data.photos[0].photographer)
+                setImageURL(con.data.photos[0].url)
+            } catch (err) {
+                console.log("Hi")
+            }
 
-            const stats = await getGPIcountry(props.country)
-            setGpiscore(Math.round((100 - (stats.data - 1.2)/0.03075)))
-            setGpi(stats.data)
+            const stats = null
+            try {
+                await getGPIcountry(props.country)
+                setGpiscore(Math.round((100 - (stats.data - 1.2)/0.03075)))
+                setGpi(stats.data)
+            } catch (err) {
+                console.log("Hi")
+            }
 
-            const stat = await getCLIcountry(props.country)
-            setCliscore(Math.round((100 - (stat.data - 21.88)/1.2563)))
-            setCli(stat.data)
+            const stat = null
+            try {
+                await getCLIcountry(props.country)
+                setCliscore(Math.round((100 - (stat.data - 21.88)/1.2563)))
+                setCli(stat.data)
+            } catch (err) {
+                console.log("Hi")
+            }
         }
         fetchdata()
         // eslint-disable-next-line react-hooks/exhaustive-deps

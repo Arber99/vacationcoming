@@ -15,10 +15,16 @@ export const Question = (props) => {
 
         const x = ((100 - val)*0.03075)+1.2
 
-        const number = await getGPIs(x);
-        const formatter = []
-        Object.values(number.data).map(value => formatter.push(value))
-        setGpi(formatter)
+        const number = null
+        try { 
+            await getGPIs(x);
+            const formatter = []
+            Object.values(number.data).map(value => formatter.push(value))
+            setGpi(formatter)
+        }
+        catch (err) {
+            console.log("Hi")
+        }
 
     }
 
@@ -26,10 +32,16 @@ export const Question = (props) => {
 
         const x = ((100 - val)*1.2563)+21.88
 
-        const number = await getCOIs(x);
-        const formatter = []
-        Object.values(number.data).map(value => formatter.push(value))
-        setCoi(formatter)
+        const number = null
+        try {
+            await getCOIs(x);
+            const formatter = []
+            Object.values(number.data).map(value => formatter.push(value))
+            setCoi(formatter)
+        }
+        catch (err) {
+            console.log("Hi")
+        }
 
     }
 
@@ -63,10 +75,16 @@ export const Question = (props) => {
             setStats([])
         }
         else {
-            const number = await getSTATs(params.toString())
-            const formatter = []
-            Object.values(number.data).map(value => formatter.push(value))
-            setStats(formatter)
+            const number = null
+            try {
+                await getSTATs(params.toString())
+                const formatter = []
+                Object.values(number.data).map(value => formatter.push(value))
+                setStats(formatter)
+            }
+            catch (err) {
+                console.log("Hi")
+            }
         }
     }
 
