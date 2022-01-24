@@ -8,6 +8,7 @@ on:
     branches: [ main, develop ]
     paths:
       - 'client/**'
+      - '.github/**'
   pull_request:
     branches: [ main, develop ]
 
