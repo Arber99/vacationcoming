@@ -26,7 +26,6 @@ const Card = (props) => {
                 setPhotographer(con.data.photos[0].photographer)
                 setImageURL(con.data.photos[0].url)
             } catch (err) {
-                console.log("Hi")
             }
 
             var stats = null
@@ -35,7 +34,6 @@ const Card = (props) => {
                 setGpiscore(Math.round((100 - (stats.data - 1.2)/0.03075)))
                 setGpi(stats.data)
             } catch (err) {
-                console.log("Hi")
             }
 
             var stat = null
@@ -44,7 +42,6 @@ const Card = (props) => {
                 setCliscore(Math.round((100 - (stat.data - 21.88)/1.2563)))
                 setCli(stat.data)
             } catch (err) {
-                console.log("Hi")
             }
         }
         fetchdata()
