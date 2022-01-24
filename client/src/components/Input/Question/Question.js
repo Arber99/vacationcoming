@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import './Question.css'
 import { getGPIs, getCOIs, getSTATs } from '../../../api'
 import { QuestionContext } from '../../Context/QuestionContext'
@@ -11,45 +11,37 @@ export const Question = (props) => {
     const [, setStats] = val3
     const [submit, setSubmit] = val4
 
-    const updateResult1 = async(val) => {
+    const updateResult1 = (val) => {
 
         const x = ((100 - val)*0.03075)+1.2
 
-        var number = null
-        try { 
-            number = await getGPIs(x);
+        getGPIs(x).then(response => {
             const formatter = []
-            Object.values(number.data).map(value => formatter.push(value))
+            Object.values(response.data).map(value => formatter.push(value))
             setGpi(formatter)
-        }
-        catch (err) {
-        }
+        }).catch()
 
     }
 
-    const updateResult2 = async(val) => {
+    const updateResult2 = (val) => {
 
         const x = ((100 - val)*1.2563)+21.88
 
-        var number = null
-        try {
-            number = await getCOIs(x);
+        getCOIs(x).then(response => {
             const formatter = []
-            Object.values(number.data).map(value => formatter.push(value))
+            Object.values(response.data).map(value => formatter.push(value))
             setCoi(formatter)
-        }
-        catch (err) {
-        }
+        }).catch()
 
     }
 
-    useEffect(() => {
-        updateResult1(0)
-        updateResult2(0)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(() => {
+    //     updateResult1(0)
+    //     updateResult2(0)
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
 
-    const updateStats = async() => {
+    const updateStats = () => {
         var param = []
 
         if(document.getElementById('input4').checked) {
@@ -73,15 +65,11 @@ export const Question = (props) => {
             setStats([])
         }
         else {
-            var number = null
-            try {
-                number = await getSTATs(params.toString())
+            getSTATs(params.toString()).then(response => {
                 const formatter = []
-                Object.values(number.data).map(value => formatter.push(value))
+                Object.values(response.data).map(value => formatter.push(value))
                 setStats(formatter)
-            }
-            catch (err) {
-            }
+            }).catch()
         }
     }
 

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { useLocation } from 'react-router-dom'
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 
