@@ -11,27 +11,26 @@ export const Question = (props) => {
     const [, setStats] = val3
     const [submit, setSubmit] = val4
 
-    const updateResult1 = (val) => {
+    const updateResult1 = async (val) => {
 
-        const x = ((100 - val)*0.03075)+1.2
+        const x = ((11 - val)*0.3075)+1.2
 
-        getGPIs(x).then(response => {
-            const formatter = []
-            Object.values(response.data).map(value => formatter.push(value))
-            setGpi(formatter)
-        }).catch()
+        let GPIlist = await getGPIs(x)
+
+        const formatter = []
+        Object.values(GPIlist.data).map(value => formatter.push(value))
+        setGpi(formatter)
 
     }
 
-    const updateResult2 = (val) => {
+    const updateResult2 = async (val) => {
 
-        const x = ((100 - val)*1.2563)+21.88
+        const x = ((11 - val)*12.563)+21.88
 
-        getCOIs(x).then(response => {
-            const formatter = []
-            Object.values(response.data).map(value => formatter.push(value))
-            setCoi(formatter)
-        }).catch()
+        let COIlist = await getCOIs(x)
+        const formatter = []
+        Object.values(COIlist.data).map(value => formatter.push(value))
+        setCoi(formatter)
 
     }
 
@@ -80,7 +79,7 @@ export const Question = (props) => {
     return (
         <div className='question-main'>
             <div className='question'>
-                <h2 className='question_text'>1. Enter a value between 1 and 100 that should represent the safety of the country (100 being the most safe)</h2>
+                <h2 className='question_text'>1. Enter a value between 1 and 10 that should represent the safety of the country (10 being the most safe)</h2>
                 <input 
                     className='input-basic' 
                     onChange={(e) => updateResult1(e.target.value)} 
@@ -91,7 +90,7 @@ export const Question = (props) => {
                     defaultValue={0}></input>
             </div>
             <div className='question'>
-                <h2 className='question_text'>2. Enter a value between 1 and 100 that should represent the cost of the country (100 being the cheapest)</h2>
+                <h2 className='question_text'>2. Enter a value between 1 and 10 that should represent the cost of the country (10 being the cheapest)</h2>
                 <input 
                     className='input-basic'
                     onChange={(e) => updateResult2(e.target.value)} 
